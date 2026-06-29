@@ -1,0 +1,18 @@
+# outputs / scratch
+output/
+examples/
+**/_frames_in/
+*.egg-info/
+build/
+dist/
+
+# python
+__pycache__/
+*.pyc
+
+# large model weights (host externally / download separately)
+checkpoints/*.pt
+
+# torch hub / hf caches if placed locally
+HF_cache/
+torch_hub/

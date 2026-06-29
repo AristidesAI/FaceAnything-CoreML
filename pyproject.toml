@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "faceanything"
+version = "1.0.0"
+description = "FaceAnything: 4D Face Reconstruction from Any Image Sequence (inference release)"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Umut Kocasari" },
+    { name = "Simon Giebenhain" },
+    { name = "Richard Shaw" },
+    { name = "Matthias Nießner" },
+]
+
+dependencies = [
+    "torch>=2",
+    "torchvision",
+    "numpy<2",
+    "einops",
+    "huggingface_hub",
+    "safetensors",
+    "omegaconf",
+    "opencv-python",
+    "imageio",
+    "imageio-ffmpeg",
+    "pillow",
+    "scipy",
+    "trimesh",
+    "plyfile",
+    "xformers",
+    "e3nn",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/faceanything", "src/depth_anything_3"]
