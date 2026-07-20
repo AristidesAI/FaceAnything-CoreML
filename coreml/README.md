@@ -1,5 +1,7 @@
 # FaceAnything — CoreML (Apple Silicon)
 
+
+### NOTE: Create a 'models' folder here and add the [HF](https://huggingface.co/a-ml/FaceAnythingCoreML) models to the directory
 Convert and run **Face Anything** natively on Apple Silicon (M-series Macs) using
 CoreML with Metal GPU acceleration. No CUDA required.
 
