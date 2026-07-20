@@ -1,6 +1,6 @@
 <div align="center">
 
-# Face Anything: 4D Face Reconstruction from Any Image Sequence
+# Face Anything: 4D Face Reconstruction from Any Image Sequence (CoreML)
 
 #### [Umut Kocasari](https://kocasariumut.github.io/) &nbsp;·&nbsp; [Simon Giebenhain](https://simongiebenhain.github.io/) &nbsp;·&nbsp; [Richard Shaw](https://scholar.google.com/citations?user=9qqtzK4AAAAJ&hl=en) &nbsp;·&nbsp; [Matthias Nießner](https://niessnerlab.org/members/matthias_niessner/profile.html)
 
@@ -12,7 +12,7 @@
 [![Code](https://img.shields.io/badge/GitHub-Code-black)](https://github.com/kocasariumut/FaceAnything)
 [![Hugging Face Space](https://img.shields.io/badge/🤗_Hugging_Face-Space-blue)](https://huggingface.co/spaces/UmutKocasari/FaceAnything)
 
-![teaser](assets/teaser.gif)
+![teaser](coreml/grand_tour.gif)
 
 </div>
 
