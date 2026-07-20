@@ -17,7 +17,7 @@
 </div>
 
 ## Table of Contents
-
+- [CoreML](CoreML)
 - [Overview](#overview)
 - [What It Produces](#what-it-produces)
 - [Installation](#installation)
@@ -27,6 +27,45 @@
 - [Acknowledgments](#acknowledgments)
 - [Citation](#citation)
 - [License](#license)
+
+## CoreML
+
+### What's Included
+
+| File | Purpose |
+|---|---|
+| `coreml_scripts/convert_coreml.py` | Convert the PyTorch checkpoint → CoreML mlpackage |
+| `coreml_scripts/run_coreml.py` | Full inference pipeline (masks → model → videos + PLY) |
+| `coreml_models/FaceAnything_fp16.mlpackage` | Converted model (fp16, ~2.5 GB) |
+| `coreml_models/FaceAnything_palettize_4bit.mlpackage` | Quantized model (4-bit, ~624 MB) |
+
+### Requirements
+- macOS 15+ with Apple Silicon (M1 or later)
+- Python 3.11
+- `venv_mps` or equivalent with `coremltools`, `torch`, `opencv-python`, `numpy`
+
+Install from the existing `requirements_mps.txt`:
+```bash
+pip install -r requirements_mps.txt
+```
+
+### Run inference
+```bash
+python coreml_scripts/run_coreml.py \
+    --input video.mov \
+    --output output_dir/ \
+    --render-size 1080 \
+    --fps 60
+```
+Options:
+| Flag | Default | Description |
+|---|---|---|
+| `--input` | (required) | Video, image, or image folder |
+| `--output` | (required) | Output directory |
+| `--coreml-model` | `coreml_models/FaceAnything_fp16.mlpackage` | Path to mlpackage |
+| `--render-size` | 1080 | Output canvas height |
+| `--fps` | 60 | Output video frame rate |
+| `--outputs` | `all` | Comma-separated: `videos`, `ply`, `grandtour` or `all` |
 
 ## Overview
 
